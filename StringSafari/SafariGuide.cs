@@ -16,9 +16,15 @@ namespace StringSafari
         /// <returns>true if the string has "zebra" in it, false otherwise</returns>
         public static bool HasBabyZebra(string str)
         {
-            // TODO
-            return false;
+            if (str == "zebra")
+
+            {return true;}
+
+            else
+
+            { return false; }
         }
+
 
         /// <summary>
         /// Looks for an adult zebra in <paramref name="str"/>.
@@ -28,9 +34,15 @@ namespace StringSafari
         /// <returns>true if the string has "ZEBRA" in it, false otherwise</returns>
         public static bool HasAdultZebra(string str)
         {
-            // TODO
-            return false;
+            if (str == "ZEBRA")
+
+            { return true; }
+
+            else
+
+            { return false; }
         }
+
 
         /// <summary>
         /// Looks for a zebra in <paramref name="str"/>.
@@ -41,8 +53,7 @@ namespace StringSafari
         /// <returns>true if the string has a zebra in it, false otherwise</returns>
         public static bool HasZebra(string str)
         {
-            // TODO
-            return false;
+            return str.ToLower().Contains("zebra");
         }
 
         /// <summary>
@@ -53,8 +64,19 @@ namespace StringSafari
         /// <returns>true if the string has at least two zebras in it, false otherwise</returns>
         public static bool HasADazzle(string str)
         {
-            // TODO
-            return false;
+            int firstZebra = str.ToLower().IndexOf("zebra");
+            int lastZebra = str.LastIndexOf("zebra");
+
+            if (firstZebra == lastZebra)
+            {
+                return true;
+
+            }
+
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -66,8 +88,19 @@ namespace StringSafari
         /// <returns>true if the string has at least two lions in it, false otherwise</returns>
         public static bool HasAPride(string str)
         {
-            // TODO
-            return false;
+            string Lion = str.ToLower();
+            int firstLion = Lion.IndexOf("lion");
+            int lastLion = str.LastIndexOf("lion");
+
+            if (firstLion == lastLion)
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
         }
 
         /// <summary>
